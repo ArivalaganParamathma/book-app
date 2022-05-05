@@ -187,7 +187,7 @@ app.post("/upload", upload.single("cover_image"), (req, res) => {
       true,
       req.session.userId,
     ]);
-    res.json(200).json({ message: "New book added successfully" });
+    res.status(200).redirect('/');
   } catch (error) {
     console.log(error.message);
     res.status(500).json({ message: "Failed to upload", error: error.message });
