@@ -1,0 +1,24 @@
+<%- include('partials/header') -%>
+  <div class="container">
+    <h3>Upload</h3>
+    <div class="row">
+        <form id="upload_form" action="javasript:void(0);" enctype="multipart/form-data" method="post" onsubmit="saveBook();">
+            <div class="mb-3">
+                <input class="form-control" name="title" id="title" type="text" placeholder="Title" aria-label="Title" value="" required="true" />
+            </div>
+            <div class="mb-3">
+                <textarea class="form-control" name="description" id="description" placeholder="Description" rows="3" required="true"></textarea>
+            </div>
+            <div class="mb-3">
+                <input class="form-control" name="cover_image" type="file" accept="image/jpeg" id="formFile" required="true" />
+            </div>
+            <div class="mb-3">
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button onclick="window.history.back()" type="button" class="btn btn-light">Cancel</button>
+            </div>
+        </form>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="/js/upload.js"></script>
+<%- include('partials/footer') -%>

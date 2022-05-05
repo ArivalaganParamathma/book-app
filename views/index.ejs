@@ -1,0 +1,35 @@
+<%- include('partials/header') -%>
+  <!-- <div class="row">
+            <div class="col-10">
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Search by Title or ISBN</label>
+                </div>
+            </div>
+            <div class="col-2">
+                <button type="button" class="btn btn-primary">Search</button>
+            </div>
+        </div> -->
+  <div class="container">
+    <h3>Books</h3>
+    <div class="row gap-3">
+        <% if(books.length){ %>
+            <% for(let i=0, len=books.length; i<len; i++){ %>
+                <div class="card col-2 p-2">
+                    <img src="/images/<%= books[i].imageName %>"  style="height:250px; object-fit: cover; object-position: top;" class="card-img-top" alt="cover" />
+                    <div class="card-body">
+                    <h5 class="card-title"><%= books[i].title %></h5>
+                    <p class="card-text">
+                        <%= books[i].description %>
+                    </p>
+                    </div>
+                </div>
+            <% }%>
+        <% } else { %>
+            <div class="col">
+                <h3>No Records</h3>
+            </div>
+        <% }%>
+    </div>
+  </div>
+<%- include('partials/footer') -%>

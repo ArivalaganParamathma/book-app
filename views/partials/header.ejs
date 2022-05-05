@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Book Application</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="appLoader" class="loader visually-hidden">
+      <svg
+        class="loader__img"
+        viewBox="0 0 100 100"
+        width="100px"
+        height="100px"
+      >
+        <circle class="loader__circle" cx="22.8" cy="77.6" r="16.5"></circle>
+        <circle class="loader__circle" cx="52.2" cy="82.9" r="6.5"></circle>
+        <circle class="loader__circle" cx="79.8" cy="69.8" r="13.1"></circle>
+      </svg>
+    </div>
+    <nav class="p-3 d-flex flex-row justify-content-between align-items-center">
+      <h3>Book Application</h3>
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/upload">Create Book</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/favourites">Favourites</a>
+        </li>
+      </ul>
+      <div class="d-flex flex-row align-items-center">
+        <img
+          src="<%= user._json.picture %>"
+          alt="profile"
+          class="rounded-circle me-2"
+          width="50"
+          height="50"
+        />
+        <h5><%= user._json.name %></h5>
+      </div>
+    </nav>
+    <div class="container-fluid pt-2"></div>
+  </body>
+</html>
